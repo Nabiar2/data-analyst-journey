@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1f1f1f;
+  --text: #e8e8e8;
+  --muted: #666666;
+  --accent: #c8f135;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; cursor: none !important; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#cursor-dot {
+  position: fixed; top: 0; left: 0; width: 8px; height: 8px;
+  background: var(--accent); border-radius: 50%; pointer-events: none;
+  z-index: 9999; transform: translate(-50%, -50%);
+  transition: width 0.15s, height 0.15s;
+}
+#cursor-ring {
+  position: fixed; top: 0; left: 0; width: 36px; height: 36px;
+  border: 1.5px solid rgba(200, 241, 53, 0.4); border-radius: 50%;
+  pointer-events: none; z-index: 9998; transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+body.cursor-hover #cursor-dot { width: 12px; height: 12px; }
+body.cursor-hover #cursor-ring { width: 52px; height: 52px; border-color: rgba(200, 241, 53, 0.7); }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { display: flex; width: max-content; animation: marquee 22s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+
+section { padding: 100px 0; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
