@@ -15,7 +15,8 @@ export default function Hero() {
 
       <div className="site-wrap w-full py-24 md:py-36 flex flex-col items-center text-center">
         <motion.div {...fadeUp(0)}>
-          <span className="inline-flex items-center gap-2 bg-accent-dim border border-accent/20 text-accent text-xs font-semibold px-4 py-2 rounded-full mb-8">
+          {/* Fíjate que aquí abajo cambié px-4 por px-6 👇 */}
+          <span className="inline-flex items-center gap-1 bg-accent-dim border border-accent/20 text-accent text-xs font-semibold w-72 justify-center py-4 rounded-full mb-8">
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse-slow" />
             Clases en vivo todos los días
           </span>
@@ -35,12 +36,12 @@ export default function Hero() {
             href="#pricing"
             className="block w-full bg-accent hover:bg-accent-hover text-bg font-black text-base uppercase tracking-wider py-4 rounded-2xl transition-all duration-200 shadow-glow-accent-sm hover:shadow-glow-accent hover:scale-[1.02]"
           >
-            Empezar gratis
+            Empezar ahora
           </a>
         </motion.div>
 
         <motion.p {...fadeUp(0.35)} className="text-text-subtle text-sm mb-12">
-          (Tu primera clase de prueba es gratis)
+          Tu carrera comienza aquí
         </motion.p>
 
         <motion.div {...fadeUp(0.4)} className="flex items-center gap-4 mb-10">

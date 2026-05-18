@@ -40,7 +40,7 @@ export default function Nav() {
               Iniciar sesión
             </a>
             <a href="#pricing" className="bg-accent hover:bg-accent-hover text-bg text-sm font-bold px-5 py-2.5 rounded-full transition-colors duration-200">
-              Empezar gratis
+              Empezar
             </a>
           </div>
 
