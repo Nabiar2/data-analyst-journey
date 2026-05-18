@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
 
 const liveClasses = [
   { time: "10:00", level: "Beginner", title: "Chapter 1 | Hello, World!" },
@@ -21,7 +21,7 @@ export default function LiveClasses() {
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] } as Transition}
           className="max-w-2xl mx-auto"
         >
           <p className="text-center text-text-muted text-sm font-semibold uppercase tracking-widest mb-6">

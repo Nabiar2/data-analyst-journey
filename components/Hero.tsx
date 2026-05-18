@@ -1,10 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
+  transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] } as Transition,
 });
 
 export default function Hero() {
