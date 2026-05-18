@@ -10,38 +10,25 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-32 px-6 lg:px-10 bg-bg">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <span className="text-accent text-xs font-semibold tracking-widest uppercase mb-6 block">
-            ✦ El proceso
-          </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-text-primary tracking-tight leading-[1.05]">
+    <section id="how-it-works" className="w-full bg-surface py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+          <span className="text-accent text-xs font-semibold tracking-widest uppercase block mb-4">✦ El proceso</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary leading-tight">
             Cuatro pasos para{" "}
             <span className="text-accent">hablar inglés</span>
-            <br />con confianza.
+            {" "}con confianza.
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {steps.map((step, i) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
+            <motion.div key={step.number} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-4xl">{step.icon}</span>
-                <span className="text-5xl font-black text-border">{step.number}</span>
+                <span className="text-3xl">{step.icon}</span>
+                <span className="text-3xl font-black text-border leading-none">{step.number}</span>
               </div>
-              <h3 className="text-text-primary font-bold text-xl mb-3">{step.title}</h3>
+              <h3 className="text-text-primary font-bold text-lg mb-3">{step.title}</h3>
               <p className="text-text-muted text-base leading-relaxed">{step.description}</p>
             </motion.div>
           ))}

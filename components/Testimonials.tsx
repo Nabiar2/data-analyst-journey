@@ -12,44 +12,31 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 px-6 lg:px-10 bg-surface/20">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <span className="text-accent text-xs font-semibold tracking-widest uppercase mb-6 block">
-            ✦ Testimonios
-          </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-text-primary tracking-tight leading-[1.05]">
-            Más de 1.200 personas ya<br />
+    <section id="testimonials" className="w-full bg-surface py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+          <span className="text-accent text-xs font-semibold tracking-widest uppercase block mb-4">✦ Testimonios</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary leading-tight">
+            Más de 1.200 personas ya{" "}
             <span className="text-accent">están aprendiendo inglés.</span>
           </h2>
-          <div className="flex items-center gap-2 mt-6">
-            <span className="text-amber-400 text-2xl">★★★★★</span>
-            <span className="text-text-muted text-base">4.9/5 — promedio de valoraciones</span>
+          <div className="flex items-center gap-3 mt-5">
+            <span className="text-amber-400 text-lg">★★★★★</span>
+            <span className="text-text-muted text-sm">4.9/5 — promedio de valoraciones</span>
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.07 }}
-              className="bg-surface border border-border rounded-2xl p-8"
-            >
-              <div className="flex text-amber-400 text-lg mb-5">{"★".repeat(t.stars)}</div>
+            <motion.div key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+              className="bg-bg border border-border rounded-2xl p-8">
+              <div className="flex text-amber-400 text-base mb-5">{"★".repeat(t.stars)}</div>
               <p className="text-text-muted text-base leading-relaxed mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
-              <div className="flex items-center gap-4">
-                <div className={`w-12 h-12 rounded-full ${t.color} flex items-center justify-center text-white font-bold shrink-0`}>{t.avatar}</div>
+              <div className="flex items-center gap-3">
+                <div className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-white text-sm font-bold shrink-0`}>{t.avatar}</div>
                 <div>
-                  <p className="text-text-primary font-bold">{t.name}</p>
-                  <p className="text-text-subtle text-sm">{t.role}</p>
+                  <p className="text-text-primary font-semibold text-sm">{t.name}</p>
+                  <p className="text-text-subtle text-xs mt-0.5">{t.role}</p>
                 </div>
               </div>
             </motion.div>

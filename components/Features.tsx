@@ -12,38 +12,25 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-32 px-6 lg:px-10 bg-surface/20">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <span className="text-accent text-xs font-semibold tracking-widest uppercase mb-6 block">
-            ✦ Por qué Skillable
-          </span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-text-primary tracking-tight leading-[1.05] max-w-3xl">
+    <section id="features" className="w-full bg-bg py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+          <span className="text-accent text-xs font-semibold tracking-widest uppercase block mb-4">✦ Por qué Skillable</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-text-primary leading-tight max-w-2xl">
             Todo lo que necesitás para aprender{" "}
             <span className="text-accent">inglés de verdad.</span>
           </h2>
-          <p className="text-text-muted text-xl mt-6 max-w-xl leading-relaxed">
+          <p className="text-text-muted text-lg leading-relaxed mt-5 max-w-xl">
             No es un curso grabado más. Es una academia viva con profes, comunidad y estructura.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feat, i) => (
-            <motion.div
-              key={feat.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.07 }}
-              className="bg-surface border border-border rounded-2xl p-8 hover:border-accent/30 transition-all duration-300"
-            >
-              <div className="text-4xl mb-5">{feat.icon}</div>
-              <h3 className="text-text-primary font-bold text-xl mb-3">{feat.title}</h3>
+            <motion.div key={feat.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+              className="bg-surface border border-border rounded-2xl p-8 hover:border-accent/30 transition-all duration-300">
+              <div className="text-3xl mb-5">{feat.icon}</div>
+              <h3 className="text-text-primary font-bold text-lg mb-3">{feat.title}</h3>
               <p className="text-text-muted text-base leading-relaxed">{feat.description}</p>
             </motion.div>
           ))}
