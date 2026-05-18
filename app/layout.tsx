@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Cursor from "@/components/Cursor";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Braian — Data Analyst",
-  description: "Portfolio personal de Braian, Data Analyst en formación con foco en finanzas y negocios.",
+  title: "Skillable Academy — Aprendé inglés con profes en vivo",
+  description:
+    "Clases de inglés grupales en vivo, todos los días. Niveles Beginner, Elementary e Intermediate. Profes reales, horarios flexibles y comunidad activa.",
+  openGraph: {
+    title: "Skillable Academy",
+    description: "Aprendé inglés con profes en vivo. Clases grupales diarias.",
+    type: "website",
+  },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#f0ede6]">
-        <Cursor />
-        {children}
-      </body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
   );
 }
