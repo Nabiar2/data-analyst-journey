@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-[0.035]" style={{ backgroundImage: "linear-gradient(#30363D 1px, transparent 1px), linear-gradient(90deg, #30363D 1px, transparent 1px)", backgroundSize: "72px 72px" }} />
       <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-accent/[0.06] blur-[140px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center w-full">
+      <div className="site-wrap py-28 md:py-36 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center w-full">
         <div>
           <motion.div {...fadeUp(0)}>
             <span className="inline-flex items-center gap-2 bg-accent-dim border border-accent/20 text-accent text-xs font-semibold px-4 py-2 rounded-full mb-8">

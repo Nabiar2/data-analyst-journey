@@ -40,7 +40,7 @@ const plans = [
 export default function Pricing() {
   return (
     <section id="pricing" className="w-full bg-bg py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="site-wrap">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
           <span className="text-accent text-xs font-semibold tracking-widest uppercase block mb-4">✦ Planes</span>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-text-primary leading-tight max-w-xl">
